@@ -1,8 +1,4 @@
-Wazuh-SIEM-Homelab
-This project demonstrates the setup and operation of a Security Information and Event Management (SIEM) system using open-source tools in a home lab environment. A Wazuh Agent is deployed on a Windows machine to collect logs and security events, which are forwarded to a Wazuh Manager running on Kali Linux for analysis, correlation, and alerting.
-This lab was built to develop hands-on skills in:
+This project demonstrates the deployment of a Security Information and Event Management (SIEM) solution using Wazuh, an open-source security monitoring platform. The setup consists of a Wazuh Manager installed on a Kali Linux virtual machine (192.168.56.101) acting as the central server, and a Wazuh Agent deployed on a Windows 11 endpoint (DESKTOP-NRBDVLJ) connected via a VirtualBox Host-Only network. The manager collects, analyzes, and correlates security events forwarded by the agent, providing real-time visibility into the Windows system's security posture through the Wazuh dashboard.
 
-Log collection and centralised monitoring
-Security event correlation and alerting
-Custom detection rule writing
-Threat simulation and detection validation
+
+The project covers the full lifecycle of agent deployment and management, including downloading and installing the Wazuh agent on Windows, registering the agent with the manager, configuring the ossec.conf file for proper communication over TCP port 1514, and troubleshooting connectivity issues such as corrupted configuration files and service failures. Key monitoring capabilities enabled include Windows Event Log collection (Application, Security, and System logs), file integrity monitoring via Syscheck, and system inventory collection via Syscollector. This setup serves as a practical foundation for understanding endpoint monitoring, log management, and security alerting in a controlled lab environment.
